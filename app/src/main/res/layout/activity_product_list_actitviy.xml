@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductListActitviy"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_toolbar"/>
+
+    <com.sandalen.step2project.ui.view.refresh.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ffffff"
+        android:id="@+id/swiper_refresh">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/id_recycer_view"
+            />
+    </com.sandalen.step2project.ui.view.refresh.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/id_tv_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="#f3f5f7"
+            android:gravity="center"
+            android:text="数量0"
+            android:textSize="18sp"
+            android:textColor="#fb601b"/>
+
+        <Button
+            android:id="@+id/id_btn_order"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/btn_bg_orange_order"
+            android:gravity="center"
+            android:text="0元 立即支付"
+            android:textSize="18sp"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+</LinearLayout>
